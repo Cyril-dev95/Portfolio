@@ -371,6 +371,10 @@ form textarea {
     margin-right: 1.9rem;
 }
 
+.form-right label {
+    margin-left: 1rem;
+}
+
 #logo_socials {
     display: flex; /* Permet de mettre mes 3 images sur la même ligne en utilisant le flexbox */
     justify-content: space-evenly; /* Permet de gérer l'espace entre mes 3 images */
