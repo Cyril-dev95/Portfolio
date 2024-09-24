@@ -399,14 +399,14 @@ form textarea {
 
 footer ul {
     padding: 3rem;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
+    list-style-type: none; /* Suppression du style des listes */
+    display: flex; /* Utilisation de flexbox pour aligner mes éléments cote à cote */
+    justify-content: center; /* Centre tous mes élements */
 }
 
 footer a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Suppression du soulignement de texte */
     font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
     font-size: 20px;
     padding: 0 3rem;
@@ -414,7 +414,7 @@ footer a {
 
 footer span {
     color: white;
-    font-size: 50px;
+    font-size: 50px; /* Modification de la taille des barres dans le footer */
 }
 
 footer li {
