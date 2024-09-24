@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+}
+
+/************* INTEGRATION POLICE D'ÉCRITURE **************/
+@font-face {
+    font-family: "Pixelade";
+    src: url("../fonts/Pixelade.TTF");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* @font-face {
+    font-family: "Consolas";
+    src: url("../fonts/consola.ttf");
+    font-weight: normal;
+    font-style: normal;
+} */
+
+body {
+    background-color: black;
+    background-image: url(../img/BG-image-portfolioO.webp); /* Ajout d'une image en fond */
+    background-size: contain; /* Redimensionne l'image de fond pour qu'elle soit entièrement visible */
+    background-repeat: no-repeat; /* Empêche l'image de fond de se répéter. */
+}
+
+#logo_cp {
+    height: 3rem;
+    padding-right: 50rem;
+    margin-left: 3rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    position: fixed; /* Force la Nav Bar a rester en position fixe */
+    top: 0; /* Position de la Nav Bar au haut de la page */
+    left: 15rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+    font-size: 22px; /* Modification de la taille du texte */
+    margin:0 1rem;
+    filter: drop-shadow(#00C8FF 2.5px 2.5px 1.25px); /* Ombres pour l'écriture */
+}
+
+#Accueil {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+    font-size: 70px; /* Modification de la taille du texte */
+    margin-top: 15rem;
+    filter: drop-shadow(#00C8FF 3px 3px 1.25px); /* Ombres pour l'écriture */
+    font-weight: 300;
+}
+
+h2 {
+    color: white;
+    font-family: "Pixelade"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+    font-size: 60px; /* Modification de la taille du texte */
+    font-weight: 100; /* Réduction de l'épaisseur de mon texte */
+    margin-top: 2rem;
+    filter: drop-shadow(#00C8FF 2px 3px 1.25px); /* Ombres pour l'écriture */
+}
+
+#button_vp {
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+    font-size: 30px; /* Modification de la taille du texte */
+    font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+    background-color: rgba(0, 0, 0, 0.678); /* Fond de mon bouton transparent */
+    border: 3px solid #00C8FF;
+    border-radius: 0.60rem; /* Arrondissement des bordures */
+}
+
+#button_vp a {
+    text-decoration: none; /* Suppression du soulignement de texte */
+    color: white;
+    filter: drop-shadow(#00C8FF 2px 3px 1.25px); /* Ombres pour l'écriture */
+}
+
+#button_vp:hover {
+    background-color: rgba(255, 255, 255, 0.849); /* Change la couleur du fond du bouton en blanc au survol */
+}
+
+#button_vp:hover a {
+    color: black; /* Changer la couleur du texte en noir au survol */
+}
+
+#Infos {
+    margin-top: 47rem;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    font-family: "Pixelade"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+    font-size: 60px; /* Modification de la taille du texte */
+    font-weight: 100; /* Réduction de l'épaisseur de mon texte */
+    margin-top: 2rem;
+    filter: drop-shadow(#00C8FF 2px 3px 1.25px); /* Ombres pour l'écriture */
+    color: white;
+}
+
+#code_style_container {
+    margin-top: 8rem;
+    margin-bottom: 15rem;
+    margin-left: 14rem;
+    word-spacing: 2px; /* Modification de l'espace entre les mots */
+}
+
+pre {
+    margin-top: 5rem;
+    line-height: 1.75rem; /* Modification de l'espace entre les lignes de mon texte */
+}
+
+.blue_color {
+    color: #4996D6;
+    font-size: 20px; /* Modification de la taille du texte */
+}
+
+.grey_color {
+    color: #848484;
+    font-size: 20px; /* Modification de la taille du texte */
+}
+
+.blue_color2 {
+    color: #00C8FF;
+}
+
+.text_modif {
+    font-family: "Pixelade"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+    font-size: 28px; /* Modification de la taille du texte */
+}
+
+#skills {
+    font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+    color: white;
+    font-size: 28px; /* Modification de la taille du texte */
+}
+
+#skills_container {
+    margin-top: 5rem;
+    display: flex; /* Utilisation flexbox pour créer 2 colonne */
+    justify-content: space-evenly; /* Permet de gérer l'espace entre mes 2 colonnes */
+}
+
+.skills_class {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#skills_class2 {
+    text-align: center; /* Alignement de mon texte au centre du conteneur */
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+}
+
+.name_skills {
+    font-size: 18px; /* Modification de la taille du texte */
+    padding-right: 20rem;
+}
+
+#skills_container2 {
+    width: 21.5%; /* Modification de la largeur de ma barre de progression */
+    margin: auto; /* Alignement de mon texte au centre de ma page */
+    margin-bottom: 15rem;
+}
+
+progress::-webkit-progress-bar {
+    background-color: white; /* Couleur de la barre non remplie */
+}
+
+progress {
+    background-color: white; /* Couleur de la barre non remplie */
+}
+
+progress::-webkit-progress-value {
+    background-color: #00C8FF; /* Couleur de la partie remplie */
+}
+
+progress::-moz-progress-bar {
+    background-color: #00C8FF; /* Couleur de la partie remplie */
+}
+
+progress {
+    height: 0.75rem; /* Modification de la hauteur de ma barre de progression */
+    width: 100%;
+    border-radius: 0.4vh; /* Arrondit les bordures */
+    overflow: hidden; /* Empêche les coins arrondis de dépasser */
+    margin-bottom: 2rem;
+}
+
+#projects {
+    width: 70%; /* Permet de modifier la largeur de mon conteneur */
+    margin: auto; /* Permet de centrer la section "Projects" */
+}
+
+.image_container {
+    margin-top: 5rem;
+    display: grid; /* Utilise Grid pour organiser les images */
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de même taille */
+    justify-items: center; /* Permet de centrer les images */
+    column-gap: 1rem; /* Ajuste l'espace entre les colonnes */
+}
+
+.image_container img {
+    height: 17rem; /* Modifie la taille de l'image */
+    width: 90%; /* Permet de modifier la largeur de mon conteneur */
+    object-fit: contain; /* Remplit l'espace sans déformer l'image */
+    border: 4px solid #00C8FF; /* Ajout de bordure à l'image */
+}
+
+#contact {
+    margin-top: 20rem;
+}
+
+#form {
+    color: white;
+    text-align: center;
+    font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+    font-size: 18px; /* Modification de la taille du texte */
+    width: 45%;
+    margin: auto; /* Permet de mettre mon bloc au centre */
+    margin-top: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 2rem; /* Arrondit les bords */
+    background-color: rgba(0, 200, 255, 0.384);
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between; /* Position entre les colonnes */
+    gap: 2rem; /* Espace entre les colonnes */
+}
+
+.form-left,
+.form-right {
+    flex: 1; /* Chaque colonne occupe la moitié de l'espace */
+    padding: 1.5rem 2rem;
+}
+
+.form-left div,
+.form-right div {
+    margin-bottom: 1rem;
+    margin-left: -1rem;
+}
+
+form label {
+    display: block; /* Permet de mettre le label au-dessus de l'input */
+    text-align: left;
+}
+
+form input {
+    width: 70%; /* Les inputs prennent toute la largeur de la colonne */
+    padding: 0.5rem;
+    border: 2px solid #00C8FF; /* Ajout de bordure sur les input avec leur couleur */
+    border-radius: 0.5rem; /* Arrondit les bordures */
+    box-sizing: border-box; /* Pour s'assurer que padding et largeur ne causent pas de débordement */
+    background-color: transparent; /* Fond des input transparent */
+}
+
+form textarea {
+    width: 85%; /* Les inputs prennent toute la largeur de la colonne */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid #00C8FF; /* Ajout de bordure sur le textarea avec sa couleur */
+    box-sizing: border-box; /* Pour s'assurer que padding et largeur ne causent pas de débordement */
+    background-color: transparent; /* Fond du textarea transparent */
+    height: 8rem; /* Modifie la hauteur du champ de text */
+    margin-right: 2rem;
+}
+
+/***************************** SELECTION DE LA 2ÈME DIV DE MON FORMULAIRE *****************************/
+.form-left div:nth-child(2) {
+    margin-left: 3rem;
+    margin-top: 2.8rem;
+    width: 102%;
+}
+
+/***************************** SELECTION DE LA 3ÈME DIV DE MON FORMULAIRE *****************************/
+.form-left div:nth-child(3) {
+    margin-top: 2.8rem;
+    width: 102%;
+}
+
+/***************************** SELECTION DE LA 4ÈME DIV DE MON FORMULAIRE *****************************/
+.form-left div:nth-child(4) {
+    margin-left: 3rem;
+    margin-top: 2.8rem;
+    width: 102%;
+}
+
+/***************************** SELECTION DU 1ER LABEL DE MON FORMULAIRE *****************************/
+.form-left div:nth-child(1) label {
+    margin-left: 3.7rem;
+}
+
+/***************************** SELECTION DU 2ÈME LABEL DE MON FORMULAIRE *****************************/
+.form-left div:nth-child(2) label {
+    margin-left: 3.6rem;
+}
+
+/***************************** SELECTION DU 3ÈME LABEL DE MON FORMULAIRE *****************************/
+.form-left div:nth-child(3) label {
+    margin-left: 3.7rem;
+}
+
+/***************************** SELECTION DU 4ÈME LABEL DE MON FORMULAIRE *****************************/
+.form-left div:nth-child(4) label {
+    margin-left: 3.5rem;
+}
+
+#icone_mail {
+    height: 2vh; /* Modification de la taille de l'image avec son id */
+    margin-top: 0.2rem;
+    margin-left: 0.7rem;
+    padding-right: 0.3rem;
+}
+
+#icone_phone {
+    height: 2.5vh; /* Modification de la taille de l'image avec son id */
+    width: 2.4vh; /* Modification de la largeur de l'image */
+    margin-left: 0.7rem;
+    padding-right: 0.5rem;
+}
+
+#num_phone {
+    font-size: 15px; /* Modification de la taille de la police avec son id */
+}
+
+#icone_house {
+    height: 2.5vh; /* Modification de la taille de l'image avec son id */
+    width: 2.4vh; /* Modification de la largeur de l'image */
+    margin-left: 0.7rem;
+    padding-right: 0.5rem;
+}
+
+#adress {
+    font-size: 17px; /* Modification de la taille de la police avec son id */
+    margin-top: 0.1rem;
+}
+
+#postal_code {
+    font-size: 15px; /* Modification de la taille de la police avec son id */
+}
+
+/***************************** SELECTION DE LA 2ÈME DIV DE MA COLONNE DE DROITE (FORMULAIRE) *****************************/
+.form-right .contact-container:nth-of-type(2) {
+    margin-top: 1.7rem;
+    margin-right: 2.5rem;
+}
+
+/***************************** SELECTION DE LA 3ÈME DIV DE MA COLONNE DE DROITE (FORMULAIRE) *****************************/
+.form-right .contact-container:nth-of-type(3) {
+    margin-top: 1.5rem;
+    margin-right: 2rem;
+}
+
+/***************************** SELECTION DE LA 4ÈME DIV DE MA COLONNE DE DROITE (FORMULAIRE) *****************************/
+.form-right .contact-container:nth-of-type(4) {
+    margin-top: 1.5rem;
+    margin-right: 1.9rem;
+}
+
+#logo_socials {
+    display: flex; /* Permet de mettre mes 3 images sur la même ligne en utilisant le flexbox */
+    justify-content: space-evenly; /* Permet de gérer l'espace entre mes 3 images */
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+#logo_socials img {
+    height: 3rem; /* Modifie la taille de base de mes 3 images */
+    display: block;
+}
+
+/***************************** SELECTION DE LA 1ÈRE IMAGE DES LOGOS (FORMULAIRE) *****************************/
+#logo_socials img:nth-child(1) {
+    height: 3.2rem; /* Modifie la taille plus précisément de l'image 1 */
+}
+
+/***************************** SELECTION DE LA 2ÈRE IMAGE DES LOGOS (FORMULAIRE) *****************************/
+#logo_socials img:nth-child(2) {
+    height: 3.4rem; /* Modifie la taille plus précisément de l'image 2 */
+}
+
+footer ul {
+    padding: 3rem;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+    font-size: 20px;
+    padding: 0 3rem;
+}
+
+footer span {
+    color: white;
+    font-size: 50px;
+}
+
+footer li {
+    margin-top: 1.2rem;
+}

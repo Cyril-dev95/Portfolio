@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Mon Portfolio</title>
+</head>
+<body>
+    <!------------------------- HEADER LOGO + NAVBAR -------------------------->
+    <header>
+        <img id="logo_cp" src="img/CP-2.webp" alt="image logo CP">
+        <nav>
+            <a href="#Accueil">Accueil</a>
+            <a href="#Profil">Profil</a>
+            <a href="#Compétences">Compétences</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </header>
+
+    <!--------------------- 1ÈRE SECTION - PAGE D'ACCUEIL ---------------------->
+    <section id="Accueil">
+        <h1>PARCHET Cyril</h1>
+        <h2>Développeur Web</h2>
+        <button id="button_vp"><a href="#Profil">Voir plus</a></button>
+    </section>
+
+    <!--------------------- 2ÈME SECTION - À PROPOS DE MOI ---------------------->
+    <section id="Infos">
+        <h3>À propos de moi</h3>
+        <pre id="code_style_container">
+            <span class="grey_color">&lt;</span><span class="blue_color">section</span><span class="grey_color">&gt;</span>
+                <span class="grey_color">&lt;</span><span class="blue_color">article</span><span class="grey_color">&gt;</span>
+                    <span class="grey_color">&lt;</span><span class="blue_color">h1</span><span class="grey_color">&gt;</span><span class="text_modif">Hello world</span><span class="grey_color">&lt;</span><span class="blue_color">/h1</span><span class="grey_color">&gt;</span>
+                        <span class="grey_color">&lt;</span><span class="blue_color">p</span><span class="grey_color">&gt;</span><span class="text_modif">Je m'appelle <span class="blue_color2">Cyril Parchet</span> et je suis actuellement en formation de <span class="blue_color2">Développeur Web</span> à Gonesse, et vis en région 
+                            parisienne.
+
+                           Doté d'un <span class="blue_color2">esprit logique</span> et d'une grande <span class="blue_color2">curiosité</span>, je vise à intégrer un poste de <span class="blue_color2">développeur front-end</span> pour 
+                           continuer à développer mes compétences techniques. Cette ambition s'aligne parfaitement avec ma passion 
+                           pour les <span class="blue_color2">nouvelles technologies</span>, les <span class="blue_color2">jeux vidéo</span> et le <span class="blue_color2">sport</span>.
+                            
+                           Je suis <span class="blue_color2">ouvert à toutes les opportunités</span> qui me permettront de <span class="blue_color2">mettre en pratique mes connaissances</span> et <span class="blue_color2">d'apporter 
+                           ma contribution</span> à des <span class="blue_color2">projets stimulants</span>.</span><span class="grey_color">&lt;</span><span class="blue_color">/p</span><span class="grey_color">&gt;</span>
+                <span class="grey_color">&lt;</span><span class="blue_color">/article</span><span class="grey_color">&gt;</span>
+            <span class="grey_color">&lt;</span><span class="blue_color">/section</span><span class="grey_color">&gt;</span>
+        </pre>            
+    </section>
+
+    <!--------------------- 3ÈME SECTION - COMPÉTENCES ---------------------->
+    <section id="skills">
+        <h3>Mes Compétences</h3>
+            <div id="skills_container">
+                <div>
+                    <p class="skills_class">Front-End</p>
+                    <p class="name_skills">HTML</p>
+                        <progress max="100" value="80"></progress>
+                    <p class="name_skills">CSS</p>
+                        <progress max="100" value="80"></progress>
+                    <p class="name_skills">Bootstrap</p>
+                        <progress max="100" value="50"></progress>
+                    <p class="name_skills">JavaScript</p>
+                        <progress max="100" value="70"></progress>
+                </div>
+                <div>
+                    <p class="skills_class">Back-End</p>
+                    <p class="name_skills">SQL</p>
+                        <progress max="100" value="60"></progress>
+                    <p class="name_skills">PHP</p>
+                        <progress max="100" value="50"></progress>
+                    <p class="name_skills">NoSQL</p>
+                        <progress max="100" value="50"></progress>
+                    <p class="name_skills">Symfony</p>
+                        <progress max="100" value="50"></progress>
+                </div>                
+            </div>
+            <div id="skills_container2">
+                <p id="skills_class2">Design</p>
+                <p class="name_skills">Photoshop</p>
+                        <progress max="100" value="70"></progress>
+                <p class="name_skills">Figma</p>
+                    <progress max="100" value="70"></progress>
+            </div>
+    </section>
+
+    <!--------------------- 4ÈME SECTION - MES PROJETS ---------------------->
+    <section id="projects">
+        <h3>Mes Projets</h3>
+        <div class="image_container">
+            <img src="img/CP-2.webp" alt=""> <!------ alt à modifier quand ce sera la bonne image ------>
+            <img src="img/CP-2.webp" alt=""> <!------ alt à modifier quand ce sera la bonne image ------>
+            <img src="img/CP-2.webp" alt=""> <!------ alt à modifier quand ce sera la bonne image ------>
+        </div>
+    </section>
+
+    <!--------------------- 5ÈME SECTION - CONTACT ---------------------->
+    <section id="contact">
+        <h3>Contactez-moi</h3>
+        <div id="form">
+            <form action="mailto:parchetcyril@gmail.com" method="post">
+                <div class="form-container">
+                    <!-------------------- Colonne de gauche -------------------->
+                    <div class="form-left">
+                        <div>
+                            <label for="name">Nom :</label>
+                            <input type="text" id="name" name="user_name"/>
+                        </div>
+                        <div>
+                            <label for="business">Entreprise :</label>
+                            <input type="text" id="business" name="user_business"/>
+                        </div>
+                        <div>
+                            <label for="mail">E-mail :</label>
+                            <input type="email" id="mail" name="user_mail" />
+                        </div>
+                        <div>
+                            <label for="phone_number">Téléphone :</label>
+                            <input type="tel" id="phone_number" name="user_phone_number"/>
+                        </div>
+                    </div>
+            
+                    <!-------------------- Colonne de droite -------------------->
+                    <div class="form-right">
+                        <div>
+                            <label for="msg">Message :</label>
+                            <textarea id="msg" name="user_message"></textarea>
+                        </div>
+                        <div class="contact-container">
+                            <img id="icone_mail" src="img/logo-mail-webp.webp" alt="icone mail">
+                            <p>parchetcyril@gmail.com</p>
+                        </div>
+                        <div class="contact-container">
+                            <img id="icone_phone" src="img/logo-phone-webp.webp" alt="icone de téléphone">
+                            <p id="num_phone">06.16.35.70.25</p>
+                        </div>
+                        <div class="contact-container">
+                            <img id="icone_house" src="img/logo-maison-webp.webp" alt="icone de maison">
+                            <p id="adress">Taverny, <span id="postal_code">95150</span></p>
+                        </div>
+                    </div>
+                </div>
+              </form>
+              <div id="logo_socials">
+                <img src="img/GitHub-white.webp" alt="image du logo GitHub de couleur blanche">
+                <img src="img/linkedin-png-white.webp" alt="image du logo Linkedin de couleur blanche">
+                <img src="img/instagram-white.webp" alt="image du logo Instagram de couleur blanche">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="#">Cyril Parchet</a></li>
+            <span>|</span>
+            <li><a href="#">© 2024 Copyright</a></li>
+            <span>|</span>
+            <li id="list-item"><a href="#">Mentions Légales</a></li>
+            <span>|</span>
+            <li><a href="#">Tous droits réservés</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
