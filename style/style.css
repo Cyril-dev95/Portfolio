@@ -10,13 +10,6 @@
     font-style: normal;
 }
 
-/* @font-face {
-    font-family: "Consolas";
-    src: url("../fonts/consola.ttf");
-    font-weight: normal;
-    font-style: normal;
-} */
-
 body {
     background-color: black;
     background-image: url(../img/BG-image-portfolioO.webp); /* Ajout d'une image en fond */
@@ -25,25 +18,27 @@ body {
 }
 
 #logo_cp {
-    height: 3rem;
-    padding-right: 50rem;
-    margin-left: 3rem;
+    height: 3vw;
+    width: 3vw;
+    padding-right: 42vw;
+    /* margin-left: 3rem; */
 }
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 1rem;
-    position: fixed; /* Force la Nav Bar a rester en position fixe */
+    position: sticky; /* Force la Nav Bar a rester en position fixe */
     top: 0; /* Position de la Nav Bar au haut de la page */
-    left: 15rem;
+    left: 0;
+    width: 100%;
 }
 
 nav a {
     text-decoration: none;
     color: white;
     font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
-    font-size: 22px; /* Modification de la taille du texte */
+    font-size: 1.5vw; /* Modification de la taille du texte */
     margin:0 1rem;
     filter: drop-shadow(#00C8FF 2.5px 2.5px 1.25px); /* Ombres pour l'écriture */
 }
@@ -55,8 +50,8 @@ nav a {
 h1 {
     color: white;
     font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
-    font-size: 70px; /* Modification de la taille du texte */
-    margin-top: 15rem;
+    font-size: 5vw; /* Modification de la taille du texte */
+    margin-top: 14vw;
     filter: drop-shadow(#00C8FF 3px 3px 1.25px); /* Ombres pour l'écriture */
     font-weight: 300;
 }
@@ -64,16 +59,16 @@ h1 {
 h2 {
     color: white;
     font-family: "Pixelade"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
-    font-size: 60px; /* Modification de la taille du texte */
+    font-size: 4vw; /* Modification de la taille du texte */
     font-weight: 100; /* Réduction de l'épaisseur de mon texte */
-    margin-top: 2rem;
+    margin-top: 2vw;
     filter: drop-shadow(#00C8FF 2px 3px 1.25px); /* Ombres pour l'écriture */
 }
 
 #button_vp {
-    margin-top: 4rem;
-    padding: 1rem 2rem;
-    font-size: 30px; /* Modification de la taille du texte */
+    margin-top: 4vw;
+    padding: 1.25vw 2.5vw;
+    font-size: 2vw; /* Modification de la taille du texte */
     font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
     background-color: rgba(0, 0, 0, 0.678); /* Fond de mon bouton transparent */
     border: 3px solid #00C8FF;
@@ -95,7 +90,7 @@ h2 {
 }
 
 #Infos {
-    margin-top: 47rem;
+    margin-top: 40vw;
     color: white;
 }
 
@@ -109,16 +104,25 @@ h3 {
     color: white;
 }
 
+#pre_container {
+    width: 80%;
+}
+
 #code_style_container {
     margin-top: 8rem;
     margin-bottom: 15rem;
-    margin-left: 14rem;
-    word-spacing: 2px; /* Modification de l'espace entre les mots */
+    margin-left: 12vw;
+    width: 90%;
+    word-spacing: 0.15vw; /* Modification de l'espace entre les mots */
 }
 
 pre {
+    width: 95%;
     margin-top: 5rem;
     line-height: 1.75rem; /* Modification de l'espace entre les lignes de mon texte */
+    white-space: pre-wrap; /* Permet au texte de passer à la ligne si nécessaire */
+    word-wrap: break-word; /* Casse les longs mots si nécessaire */
+    overflow-wrap: break-word;
 }
 
 .blue_color {
@@ -140,6 +144,11 @@ pre {
     font-size: 28px; /* Modification de la taille du texte */
 }
 
+.text_with_margin {
+    font-family: "Pixelade"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+    font-size: 28px; /* Modification de la taille du texte */
+}
+
 #skills {
     font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
     color: white;
@@ -148,8 +157,14 @@ pre {
 
 #skills_container {
     margin-top: 5rem;
-    display: flex; /* Utilisation flexbox pour créer 2 colonne */
-    justify-content: space-evenly; /* Permet de gérer l'espace entre mes 2 colonnes */
+    display: flex; /* Utilisation de flexbox pour créer 2 colonnes */
+    justify-content: center; /* Centre les div horizontalement */
+    gap: 20.5vw; /* Ajoute un espace entre les deux sections Front-End et Back-End */
+}
+
+
+#skills_container progress {
+    width: 20.5vw;
 }
 
 .skills_class {
@@ -165,11 +180,10 @@ pre {
 
 .name_skills {
     font-size: 18px; /* Modification de la taille du texte */
-    padding-right: 20rem;
 }
 
 #skills_container2 {
-    width: 21.5%; /* Modification de la largeur de ma barre de progression */
+    width: 20.6vw; /* Modification de la largeur de ma barre de progression */
     margin: auto; /* Alignement de mon texte au centre de ma page */
     margin-bottom: 15rem;
 }
@@ -219,15 +233,16 @@ progress {
 }
 
 #contact {
-    margin-top: 20rem;
+    margin-top: 15rem;
+    width: 100%;
 }
 
 #form {
     color: white;
-    text-align: center;
+    text-align: center; /* Permet de centrer mon texte au milieu de la page */
     font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
     font-size: 18px; /* Modification de la taille du texte */
-    width: 45%;
+    width: 45vw;
     margin: auto; /* Permet de mettre mon bloc au centre */
     margin-top: 3rem;
     padding-top: 1rem;
@@ -402,6 +417,7 @@ footer ul {
     list-style-type: none; /* Suppression du style des listes */
     display: flex; /* Utilisation de flexbox pour aligner mes éléments cote à cote */
     justify-content: center; /* Centre tous mes élements */
+    white-space: nowrap; /* Empêche le retour à la ligne des éléments */
 }
 
 footer a {
@@ -409,14 +425,188 @@ footer a {
     text-decoration: none; /* Suppression du soulignement de texte */
     font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
     font-size: 20px;
-    padding: 0 3rem;
-}
-
-footer span {
-    color: white;
-    font-size: 50px; /* Modification de la taille des barres dans le footer */
+    padding: 0 2vw;
 }
 
 footer li {
-    margin-top: 1.2rem;
+    margin-top: 1.2rem;    
+}
+
+.dividing_bar {
+    margin-bottom: 15rem;
+    margin-left: 30%;
+    margin-right: 30%;
+    box-shadow: 0px 0px 10px 5px #00C8FF; /* Ajout d'ombres autour de ma barre de séparation */
+}
+
+.dividing_bar2 {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15rem;
+    box-shadow: 0px 0px 10px 5px #00C8FF; /* Ajout d'ombres autour de ma barre de séparation */
+}
+
+@media (max-width: 1644px) {
+    #code_style_container {
+        margin-left: 15vw; /* Réduit la marge gauche sur les petits écrans */
+    }
+
+    pre {
+        margin-top: 5rem;
+        line-height: 1.75rem; /* Modification de l'espace entre les lignes de mon texte */
+        white-space: pre-line; /* Permet au texte de passer à la ligne si nécessaire */
+    }
+
+    .text_with_margin {
+        display: block; /* Permet de faire en sorte que le span occupe toute la largeur */
+        margin-left: 11.5rem; /* Ajuste l'espace à gauche selon tes besoins */
+        margin-bottom: -1rem;
+    }
+
+    .margin_left_side1 {
+        margin-left: 3rem;
+    }
+
+    .margin_left_side2 {
+        margin-left: 6rem;
+    }
+
+    .margin_left_side3 {
+        margin-left: 9rem;
+    }
+
+    .margin_left_side4 {
+        margin-left: 20rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .image_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image_container img:nth-child(3) {
+        margin-top: 3.5rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    #form {
+        min-width: 750px;
+    }
+
+    .form-container {
+        display: block;  
+        padding-right: 2.5rem;      
+    }
+
+    .form-left {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .responsive-left:nth-child(1) {
+        margin-top: 2.8rem;
+    }
+
+    .form-right div {
+        margin-left: 4.5rem;
+    }
+
+    form input {
+        width: 90%;
+    }
+
+    form div:nth-child(3) input {
+        padding-left: 13.4vw;
+        margin-left: 0.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    footer a {       
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+    background-size: contain; /* Redimensionne l'image de fond pour qu'elle soit entièrement visible */
+    background-repeat: no-repeat; /* Empêche l'image de fond de se répéter. */
+    width: 100%;
+    }
+
+    #form {
+        min-width: 80vw;
+    }
+
+    footer {
+        text-align: center;
+
+    }
+
+    footer ul {
+        display: inline-block;
+        text-align: center;
+    }
+
+    footer li {
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .blue_color {
+        font-size: 16px; /* Modification de la taille du texte */
+    }
+    
+    .grey_color {
+        font-size: 16px; /* Modification de la taille du texte */
+    }
+
+    .text_modif {
+        font-size: 24px; /* Modification de la taille du texte */
+    }
+    
+    .text_with_margin {
+        font-size: 24px; /* Modification de la taille du texte */
+    }
+
+    #code_style_container {
+        margin-left: 3rem;
+    }
+
+    .form-left {
+        width: 100%; /* Prendre toute la largeur */
+        display: flex;
+        flex-direction: column; /* Colonne pour les inputs */
+        align-items: center; /* Centrer les inputs */
+    }
+
+/***************************** SELECTION DE LA 2ÈME DIV DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(1) input {
+        padding: 0.5rem 3rem;    
+    }
+
+/***************************** SELECTION DE LA 2ÈME DIV DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(2) {
+        margin-left: -1rem;
+        width: 84%;
+    }
+
+/***************************** SELECTION DE LA 2ÈME DIV DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(3) {
+        margin-left: -1.8rem;
+        width: 84%;
+    }
+/***************************** SELECTION DE LA 2ÈME DIV DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(4) {
+        margin-left: -1rem;
+        width: 84%;
+    }
+
+    form textarea {
+        margin-left: -2.55rem;
+        width: 132%;
+    }
 }
