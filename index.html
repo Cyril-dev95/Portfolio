@@ -6,25 +6,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="img/CP-2.webp" type="image/webp">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta name="description" content="Découvrez mon portfolio en tant que Développeur Web Junior, axé sur la conception de sites web modernes et interactifs utilisant HTML, CSS et JavaScript. Parcourez mes projets et mes compétences en développement front-end et en design responsive."/>
     <title>Mon Portfolio</title>
 </head>
-<body>
+<body>    
     <!------------------------- HEADER LOGO + NAVBAR -------------------------->
-    <header>
-        <img id="logo_cp" src="img/CP-2.webp" alt="image logo CP">
-        <nav>
-            <a href="#Accueil">Accueil</a>
-            <a href="#Profil">Profil</a>
-            <a href="#Compétences">Compétences</a>
-            <a href="#Contact">Contact</a>
-        </nav>
-    </header>
-
+        <header>
+            <img id="logo_cp" src="img/CP-2.webp" alt="image logo CP">
+            <nav>
+                <div class="pos-f-t">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                            <a class="nav-link" href="#Infos">Profil</a>
+                            <a class="nav-link" href="#skills">Compétences</a>
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-dark bg-dark">
+                        <button class="navbar-toggler" aria-label="Toggle navigation">☰</button>
+                    </nav>
+                </div>
+            </nav>
+        </header>
+        
     <!--------------------- 1ÈRE SECTION - PAGE D'ACCUEIL ---------------------->
     <section id="Accueil">
         <h1>PARCHET Cyril</h1>
         <h2>Développeur Web</h2>
-        <button id="button_vp"><a href="#Profil">Voir plus</a></button>
+        <button id="button_vp"><a href="#Infos">Voir plus</a></button>
     </section>
 
     <!--------------------- 2ÈME SECTION - À PROPOS DE MOI ---------------------->
@@ -85,7 +98,7 @@
             <div id="skills_container2">
                 <p id="skills_class2">Design</p>
                 <p class="name_skills">Photoshop</p>
-                        <progress max="100" value="70"></progress>
+                    <progress max="100" value="70"></progress>
                 <p class="name_skills">Figma</p>
                     <progress max="100" value="70"></progress>
             </div>
@@ -117,19 +130,19 @@
                     <div class="form-left">
                         <div class="responsive-left">
                             <label for="name">Nom :</label>
-                            <input type="text" id="name" name="user_name"/>
+                            <input type="text" id="name" name="user_name">
                         </div>
                         <div class="responsive-right">
                             <label for="business">Entreprise :</label>
-                            <input type="text" id="business" name="user_business"/>
+                            <input type="text" id="business" name="user_business">
                         </div>
                         <div class="responsive-left">
                             <label for="mail">E-mail :</label>
-                            <input type="email" id="mail" name="user_mail" />
+                            <input type="email" id="mail" name="user_mail">
                         </div>
                         <div class="responsive-right">
                             <label for="phone_number">Téléphone :</label>
-                            <input type="tel" id="phone_number" name="user_phone_number"/>
+                            <input type="tel" id="phone_number" name="user_phone_number">
                         </div>
                     </div>
             
@@ -141,7 +154,7 @@
                         </div>
                         <div class="contact-container">
                             <img id="icone_mail" src="img/logo-mail-webp.webp" alt="icone mail">
-                            <p>parchetcyril@gmail.com</p>
+                            <p id="email_perso">parchetcyril@gmail.com</p>
                         </div>
                         <div class="contact-container">
                             <img id="icone_phone" src="img/logo-phone-webp.webp" alt="icone de téléphone">

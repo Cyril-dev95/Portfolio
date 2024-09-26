@@ -2,6 +2,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth; /* Effet de défilement fluide */
+}
+
 /************* INTEGRATION POLICE D'ÉCRITURE **************/
 @font-face {
     font-family: "Pixelade";
@@ -12,9 +16,19 @@
 
 body {
     background-color: black;
-    background-image: url(../img/BG-image-portfolioO.webp); /* Ajout d'une image en fond */
+    background-image: url(../img/BG-Portfolio-webp.webp); /* Ajout d'une image en fond */
     background-size: contain; /* Redimensionne l'image de fond pour qu'elle soit entièrement visible */
     background-repeat: no-repeat; /* Empêche l'image de fond de se répéter. */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-collapse {
+    display: none; /* Par défaut, on cache le menu */
 }
 
 #logo_cp {
@@ -28,7 +42,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     margin-top: 1rem;
-    position: sticky; /* Force la Nav Bar a rester en position fixe */
+    position: fixed; /* Force la Nav Bar a rester en position fixe */
     top: 0; /* Position de la Nav Bar au haut de la page */
     left: 0;
     width: 100%;
@@ -42,6 +56,7 @@ nav a {
     margin:0 1rem;
     filter: drop-shadow(#00C8FF 2.5px 2.5px 1.25px); /* Ombres pour l'écriture */
 }
+
 
 #Accueil {
     text-align: center;
@@ -104,14 +119,10 @@ h3 {
     color: white;
 }
 
-#pre_container {
-    width: 80%;
-}
-
 #code_style_container {
     margin-top: 8rem;
     margin-bottom: 15rem;
-    margin-left: 12vw;
+    margin-left: 10vw;
     width: 90%;
     word-spacing: 0.15vw; /* Modification de l'espace entre les mots */
 }
@@ -390,6 +401,10 @@ form textarea {
     margin-left: 1rem;
 }
 
+.form-right p {
+    text-align: center;
+}
+
 #logo_socials {
     display: flex; /* Permet de mettre mes 3 images sur la même ligne en utilisant le flexbox */
     justify-content: space-evenly; /* Permet de gérer l'espace entre mes 3 images */
@@ -449,12 +464,13 @@ footer li {
 @media (max-width: 1644px) {
     #code_style_container {
         margin-left: 15vw; /* Réduit la marge gauche sur les petits écrans */
+        width: 75%;
     }
 
     pre {
         margin-top: 5rem;
         line-height: 1.75rem; /* Modification de l'espace entre les lignes de mon texte */
-        white-space: pre-line; /* Permet au texte de passer à la ligne si nécessaire */
+        white-space: pre-line; /* Permet au texte de passer à la ligne si nécessaire */        
     }
 
     .text_with_margin {
@@ -492,12 +508,12 @@ footer li {
 
 @media (max-width: 1280px) {
     #form {
-        min-width: 750px;
+        min-width: 755px;
     }
 
     .form-container {
         display: block;  
-        padding-right: 2.5rem;      
+        padding-right: 3.5rem;      
     }
 
     .form-left {
@@ -509,17 +525,58 @@ footer li {
         margin-top: 2.8rem;
     }
 
+    .form-left div,
     .form-right div {
-        margin-left: 4.5rem;
+    margin-top: 2.8rem;
+    margin-right: -1rem;
     }
 
     form input {
         width: 90%;
     }
 
-    form div:nth-child(3) input {
-        padding-left: 13.4vw;
-        margin-left: 0.8rem;
+/***************************** SELECTION DU 1ER INPUT DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(1) input {
+        width: 80%;
+    }
+    
+/***************************** SELECTION DU 1ER LABEL DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(1) label {
+        margin-left: 2.6rem;
+    }
+
+/***************************** SELECTION DU 2ÈME LABEL DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(2) label {
+        margin-left: 1.5rem;
+    }
+
+/***************************** SELECTION DU 3ÈME LABEL DE MON FORMULAIRE *****************************/
+.form-left div:nth-child(3) label {
+    margin-left: 2.6rem;
+}
+
+/***************************** SELECTION DU 4ÈME LABEL DE MON FORMULAIRE *****************************/
+.form-left div:nth-child(4) label {
+    margin-left: 1.5rem;
+}
+
+/***************************** SELECTION DU 3ÈME INPUT DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(3) input {
+        width: 86%;
+        margin-left: 1.5rem;
+    }
+
+    .form-right label {
+        margin-left: 2.6rem;
+    }
+    
+    .form-right textarea {
+        width: 98%;
+        margin-left: 2.2rem;
+    }
+
+    .form-right .contact-container {
+        margin-left: 6rem;
     }
 }
 
@@ -537,12 +594,28 @@ footer li {
     }
 
     #form {
-        min-width: 80vw;
+        min-width: 450px;
+    }
+
+    .form-left div:nth-child(1) input {
+        width: 72.2%;
+        margin-left: -0.2rem;
+    }
+
+    .form-left div:nth-child(2) input {
+        width: 80%;
+    }
+
+    .form-left div:nth-child(3) input {
+        width: 80%;
+    }
+
+    .form-left div:nth-child(4) input {
+        width: 80%;
     }
 
     footer {
         text-align: center;
-
     }
 
     footer ul {
@@ -553,9 +626,40 @@ footer li {
     footer li {
         padding: 1rem 0;
     }
+
+    .collapse {
+        display: none; /* Cache la navbar sur les petits écrans */
+    }
+    
+    .navbar-toggler {
+        background: none;
+        border: none;
+        font-size: 20px; /* Taille du bouton */
+        cursor: pointer; /* Curseur pour le bouton */
+        color: #00C8FF;
+        margin-top: -0.5rem;
+    }
+
 }
 
-@media (max-width: 450px) {
+@media (max-width: 566px) {
+    .form-container {
+        display: flex;
+        flex-direction: column; /* Organise les éléments en colonne */
+        align-items: center; /* Centre les éléments horizontalement */
+        text-align: center; /* Centre le texte */
+    }
+
+    .form-right .contact-container {
+        text-align: center; /* Centre le texte dans chaque contact-container */
+    }
+}
+
+@media (max-width: 455px) {
+    #form {
+        min-width: 345px;
+    }
+
     .blue_color {
         font-size: 16px; /* Modification de la taille du texte */
     }
@@ -573,7 +677,51 @@ footer li {
     }
 
     #code_style_container {
-        margin-left: 3rem;
+        margin-left: 1rem;
+        width: 90%;
+    }
+
+    .image_container {
+        display: flex;
+        flex-direction: column; /* Aligne les images en colonne */
+        align-items: center; /* Centre les images horizontalement */
+    }
+
+    .image_container img {
+        width: 90%; /* Ajustez la largeur des images si nécessaire */
+        margin-bottom: 2rem; /* Espace entre les images */
+    }
+
+    .image_container img:nth-child(3) {
+        margin-top: 0;
+    }
+
+    #skills_container {
+        display: flex;
+        flex-direction: column; /* Aligne les compétences en colonne */
+        align-items: center; /* Centre les compétences horizontalement */
+        text-align: center;
+    }
+
+    #skills_container2 {
+        display: flex;
+        flex-direction: column; /* Aligne en colonne */
+        align-items: center;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    #skills_container2 progress {
+        width: 293%; /* Ajuste la largeur des barres de progression */
+        margin-bottom: 1;
+    }
+
+    #skills_container div {
+        width: 100%;
+    }
+
+    #skills_container progress {
+        width: 60%;
     }
 
     .form-left {
@@ -583,30 +731,73 @@ footer li {
         align-items: center; /* Centrer les inputs */
     }
 
+    .form-left {
+        padding: 0;
+        margin-left: 1rem;
+        display: block;
+    }
+
 /***************************** SELECTION DE LA 2ÈME DIV DE MON FORMULAIRE *****************************/
     .form-left div:nth-child(1) input {
-        padding: 0.5rem 3rem;    
+        margin-left: 2.6rem;
+        width: 70.5%;
+    }
+
+/***************************** SELECTION DU 1ER LABEL DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(1) label {
+        margin-left: 4.7rem;
     }
 
 /***************************** SELECTION DE LA 2ÈME DIV DE MON FORMULAIRE *****************************/
     .form-left div:nth-child(2) {
-        margin-left: -1rem;
-        width: 84%;
+        margin-left: 1.5rem;
+        width: 98%;
+    }
+
+/***************************** SELECTION DU 2ÈME LABEL DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(2) label {
+        margin-left: 2.2rem;
     }
 
 /***************************** SELECTION DE LA 2ÈME DIV DE MON FORMULAIRE *****************************/
     .form-left div:nth-child(3) {
-        margin-left: -1.8rem;
-        width: 84%;
+        margin-left: 0.75rem;
+        width: 98%;
     }
-/***************************** SELECTION DE LA 2ÈME DIV DE MON FORMULAIRE *****************************/
-    .form-left div:nth-child(4) {
-        margin-left: -1rem;
-        width: 84%;
+    
+/***************************** SELECTION DU 3ÈME LABEL DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(3) label {
+        margin-left: 2.95rem;
     }
 
-    form textarea {
-        margin-left: -2.55rem;
-        width: 132%;
+/***************************** SELECTION DE LA 4ÈME DIV DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(4) {
+        margin-left: 1.5rem;
+        width: 97.5%
     }
+    
+/***************************** SELECTION DU 4ÈME LABEL DE MON FORMULAIRE *****************************/
+    .form-left div:nth-child(4) label {
+        margin-left: 2.1rem;
+    }
+
+    .form-right textarea {
+        width: 80%;
+        margin-left: 4rem;
+    }
+
+    .form-right label {
+        margin-left: 4.3rem;
+    }
+
 }
+
+@media (min-width: 769px) {
+    nav {
+      display: flex; /* Affiche la navbar normale */
+    }
+  
+    .navbar-toggler {
+      display: none; /* Cache le bouton hamburger */
+    }
+  }
