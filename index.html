@@ -5,33 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" href="img/CP-2.webp" type="image/webp">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="icon" href="img/CP-2.webp" type="image/webp">    
     <meta name="description" content="Découvrez mon portfolio en tant que Développeur Web Junior, axé sur la conception de sites web modernes et interactifs utilisant HTML, CSS et JavaScript. Parcourez mes projets et mes compétences en développement front-end et en design responsive."/>
     <title>Mon Portfolio</title>
 </head>
-<body>    
-    <!------------------------- HEADER LOGO + NAVBAR -------------------------->
-        <header>
-            <img id="logo_cp" src="img/CP-2.webp" alt="image logo CP">
-            <nav>
-                <div class="pos-f-t">
-                    <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="bg-dark p-4">
-                            <a class="nav-link" href="index.html">Accueil</a>
-                            <a class="nav-link" href="#Infos">Profil</a>
-                            <a class="nav-link" href="#skills">Compétences</a>
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </div>
-                    </div>
-                    <nav class="navbar navbar-dark bg-dark">
-                        <button class="navbar-toggler" aria-label="Toggle navigation">☰</button>
-                    </nav>
+<body>
+    <!------------------------- HEADER LOGO + NAVBAR -------------------------->    
+    <header>
+        <nav>
+            <div class="mobile-menu">
+                <span class="material-symbols-outlined" onclick="toggler()" id="toggler">menu</span>
+            </div>
+            <div class="menu">
+                <div class="menu-container">
+                    <a href="#" class="logo">
+                        <img id="logo_cp" src="img/CP-2.webp" alt="image logo CP">
+                    </a>
+                    <ul class="menu-listing">
+                        <li>
+                            <a href="#Infos">Profil</a>
+                        </li>
+                        <li>
+                            <a href="#skills">Compétences</a>
+                        </li>
+                        <li>
+                            <a href="#projects">Mes Projets</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
         
     <!--------------------- 1ÈRE SECTION - PAGE D'ACCUEIL ---------------------->
     <section id="Accueil">
@@ -124,13 +132,13 @@
     <section id="contact">
         <h3>Contactez-moi</h3>
         <div id="form">
-            <form action="mailto:parchetcyril@gmail.com" method="post">
+            <form id="contactForm">
                 <div class="form-container">
                     <!-------------------- Colonne de gauche -------------------->
                     <div class="form-left">
                         <div class="responsive-left">
                             <label for="name">Nom :</label>
-                            <input type="text" id="name" name="user_name">
+                            <input type="text" id="name" name="user_name" required>
                         </div>
                         <div class="responsive-right">
                             <label for="business">Entreprise :</label>
@@ -138,7 +146,7 @@
                         </div>
                         <div class="responsive-left">
                             <label for="mail">E-mail :</label>
-                            <input type="email" id="mail" name="user_mail">
+                            <input type="email" id="mail" name="mail">
                         </div>
                         <div class="responsive-right">
                             <label for="phone_number">Téléphone :</label>
@@ -150,8 +158,9 @@
                     <div class="form-right">
                         <div>
                             <label for="msg">Message :</label>
-                            <textarea id="msg" name="user_message"></textarea>
+                            <textarea id="msg" name="message" required></textarea>
                         </div>
+                        <button type="submit">Envoyer</button>
                         <div class="contact-container">
                             <img id="icone_mail" src="img/logo-mail-webp.webp" alt="icone mail">
                             <p id="email_perso">parchetcyril@gmail.com</p>
@@ -168,20 +177,24 @@
                 </div>
             </form>
               <div id="logo_socials">
-                <img src="img/GitHub-white.webp" alt="image du logo GitHub de couleur blanche">
-                <img src="img/linkedin-png-white.webp" alt="image du logo Linkedin de couleur blanche">
-                <img src="img/instagram-white.webp" alt="image du logo Instagram de couleur blanche">
+                <a href="https://github.com/Cyril-dev95" target="_blank"><img src="img/GitHub-white.webp" alt="image du logo GitHub de couleur blanche"></a>
+                <a href="https://www.linkedin.com/in/cyril-parchet-318a4b32b/" target="_blank"><img src="img/linkedin-png-white.webp" alt="image du logo Linkedin de couleur blanche"></a>
+                <a href="https://www.instagram.com/cyril_cyraa/" target="_blank"><img src="img/instagram-white.webp" alt="image du logo Instagram de couleur blanche"></a>
             </div>
         </div>
     </section>
 
+    <!------------------------- FOOTER + COPYRIGHT -------------------------->
     <footer>
         <ul>
             <li><a href="#">Cyril Parchet</a></li>
             <li><a href="#">© 2024 Copyright</a></li>
-            <li id="list-item"><a href="#">Mentions Légales</a></li>
+            <li><a href="#">Mentions Légales</a></li>
             <li><a href="#">Tous droits réservés</a></li>
         </ul>
-    </footer>
+    </footer>    
+    <!-- Lien vers la librairie EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -15,48 +15,61 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     background-color: black;
     background-image: url(../img/BG-Portfolio-webp.webp); /* Ajout d'une image en fond */
     background-size: contain; /* Redimensionne l'image de fond pour qu'elle soit entièrement visible */
     background-repeat: no-repeat; /* Empêche l'image de fond de se répéter. */
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-collapse {
-    display: none; /* Par défaut, on cache le menu */
-}
-
 #logo_cp {
-    height: 3vw;
-    width: 3vw;
-    padding-right: 42vw;
-    /* margin-left: 3rem; */
+    display: block;
+    width: 3.5rem;
+    padding-left: 8vw;
 }
 
-header {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 1rem;
-    position: fixed; /* Force la Nav Bar a rester en position fixe */
-    top: 0; /* Position de la Nav Bar au haut de la page */
-    left: 0;
+.menu {
+    position: fixed;
     width: 100%;
+    margin-top: 1rem;
+    display: block;
+    top: 0;
 }
 
-nav a {
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-listing {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-right: 7vw;
+}
+
+.menu-listing a {
     text-decoration: none;
     color: white;
+    padding: 1rem 2rem;
     font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
-    font-size: 1.5vw; /* Modification de la taille du texte */
-    margin:0 1rem;
-    filter: drop-shadow(#00C8FF 2.5px 2.5px 1.25px); /* Ombres pour l'écriture */
+    filter: drop-shadow(#00C8FF 3px 3px 1.25px); /* Ombres pour l'écriture */
+    font-size: 1.5vw;    
 }
 
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0; /* Changement ici */
+    height: 80px;
+    color: white;
+    z-index: 9999;
+    padding-right: 2rem; /* Changement ici */
+    display: flex;
+    align-items: center;
+    display: none;
+}
 
 #Accueil {
     text-align: center;
@@ -105,7 +118,7 @@ h2 {
 }
 
 #Infos {
-    margin-top: 40vw;
+    margin-top: 35vw;
     color: white;
 }
 
@@ -172,7 +185,6 @@ pre {
     justify-content: center; /* Centre les div horizontalement */
     gap: 20.5vw; /* Ajoute un espace entre les deux sections Front-End et Back-End */
 }
-
 
 #skills_container progress {
     width: 20.5vw;
@@ -461,6 +473,26 @@ footer li {
     box-shadow: 0px 0px 10px 5px #00C8FF; /* Ajout d'ombres autour de ma barre de séparation */
 }
 
+.form-right button {
+    margin-left: -3rem;
+    background-color: transparent;
+    border: 2px solid #00C8FF;
+    color: white;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    font-size: 16px;
+    font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+}
+
+.form-right button:hover {
+    margin-left: -3rem;
+    background-color: black;
+    border: 2px solid #00C8FF;
+    color: #00C8FF;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+}
+
 @media (max-width: 1644px) {
     #code_style_container {
         margin-left: 15vw; /* Réduit la marge gauche sur les petits écrans */
@@ -527,8 +559,8 @@ footer li {
 
     .form-left div,
     .form-right div {
-    margin-top: 2.8rem;
-    margin-right: -1rem;
+        margin-top: 2.8rem;
+        margin-right: -1rem;
     }
 
     form input {
@@ -551,14 +583,14 @@ footer li {
     }
 
 /***************************** SELECTION DU 3ÈME LABEL DE MON FORMULAIRE *****************************/
-.form-left div:nth-child(3) label {
-    margin-left: 2.6rem;
-}
+    .form-left div:nth-child(3) label {
+        margin-left: 2.6rem;
+    }
 
 /***************************** SELECTION DU 4ÈME LABEL DE MON FORMULAIRE *****************************/
-.form-left div:nth-child(4) label {
-    margin-left: 1.5rem;
-}
+    .form-left div:nth-child(4) label {
+        margin-left: 1.5rem;
+    }
 
 /***************************** SELECTION DU 3ÈME INPUT DE MON FORMULAIRE *****************************/
     .form-left div:nth-child(3) input {
@@ -568,6 +600,7 @@ footer li {
 
     .form-right label {
         margin-left: 2.6rem;
+        margin-top: -3.5rem;
     }
     
     .form-right textarea {
@@ -578,6 +611,10 @@ footer li {
     .form-right .contact-container {
         margin-left: 6rem;
     }
+
+    .form-right button {
+        margin-left: 4rem;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -587,10 +624,44 @@ footer li {
 }
 
 @media (max-width: 768px) {
-    body {
-    background-size: contain; /* Redimensionne l'image de fond pour qu'elle soit entièrement visible */
-    background-repeat: no-repeat; /* Empêche l'image de fond de se répéter. */
-    width: 100%;
+    body {        
+        background-repeat: no-repeat; /* Empêche l'image de fond de se répéter. */
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 48px; /* Modification de la taille du texte */
+    }
+
+    #Infos {
+        margin-left: -3rem;
+        margin-bottom: -5rem;
+    }
+
+    #skills {
+        margin-top: -5rem;
+        margin-bottom: -5rem;
+    }
+
+    .skills_class {
+        font-size: 26px;
+    }
+
+    .name_skills {
+        font-size: 14px;
+    }
+
+    #skills_class2 {
+        font-size: 26px;
+    }
+
+    #projects {
+        margin-top: -5rem;
+        margin-bottom: -2rem;
+    }
+
+    #contact {
+        margin-top: 9rem;
     }
 
     #form {
@@ -627,19 +698,42 @@ footer li {
         padding: 1rem 0;
     }
 
-    .collapse {
-        display: none; /* Cache la navbar sur les petits écrans */
-    }
-    
-    .navbar-toggler {
-        background: none;
-        border: none;
-        font-size: 20px; /* Taille du bouton */
-        cursor: pointer; /* Curseur pour le bouton */
-        color: #00C8FF;
-        margin-top: -0.5rem;
+    .menu {
+        display: none;
     }
 
+    .menu-container {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        position: relative; /* Ajoutez ceci ici */
+        z-index: 10; /* Assurez-vous qu'il soit supérieur */
+        background-color: rgba(0, 0, 0, 0.87);
+        margin-top: -1rem;
+    }
+
+    .menu-listing {
+        flex-direction: column;
+    }
+
+    .menu-listing a {
+        box-sizing: border-box;
+        display: block;
+        font-size: 1.7rem;
+    }
+
+    #logo_cp {
+        margin-bottom: 4rem;
+        margin-top: -7rem;
+        width: 5rem;
+        padding-left: 0;
+    }
+
+   .mobile-menu {
+        display: flex;
+        justify-content: center;
+   }
 }
 
 @media (max-width: 566px) {
@@ -653,6 +747,10 @@ footer li {
     .form-right .contact-container {
         text-align: center; /* Centre le texte dans chaque contact-container */
     }
+
+    .form-right label {
+        margin-top: -5rem;
+    }
 }
 
 @media (max-width: 455px) {
@@ -661,23 +759,41 @@ footer li {
     }
 
     .blue_color {
-        font-size: 16px; /* Modification de la taille du texte */
+        font-size: 12px; /* Modification de la taille du texte */
     }
     
     .grey_color {
-        font-size: 16px; /* Modification de la taille du texte */
+        font-size: 12px; /* Modification de la taille du texte */
     }
 
     .text_modif {
-        font-size: 24px; /* Modification de la taille du texte */
+        font-size: 20px; /* Modification de la taille du texte */
     }
-    
+        
+    .margin_left_side1 {
+        margin-left: 1.5rem;
+    }
+
+    .margin_left_side2 {
+        margin-left: 3.5rem;
+    }
+
+    .margin_left_side3 {
+        margin-left: 5.5rem;
+    }
+
     .text_with_margin {
-        font-size: 24px; /* Modification de la taille du texte */
+        font-size: 20px; /* Modification de la taille du texte */
+        margin-left: 7.5rem;
+        width: 50%;
+    }
+
+    #pre_container {
+        width: 80%;
     }
 
     #code_style_container {
-        margin-left: 1rem;
+        margin-left: 5rem;
         width: 90%;
     }
 
@@ -792,12 +908,13 @@ footer li {
 
 }
 
-@media (min-width: 769px) {
-    nav {
-      display: flex; /* Affiche la navbar normale */
+@media (max-width: 360px) {
+    #form {
+        min-width: 90%;
     }
-  
-    .navbar-toggler {
-      display: none; /* Cache le bouton hamburger */
+
+    .form-right textarea {
+        width: 70%;
+        margin-left: 5.2rem;
     }
-  }
+}
