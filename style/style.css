@@ -447,16 +447,18 @@ footer ul {
     white-space: nowrap; /* Empêche le retour à la ligne des éléments */
 }
 
-footer a {
+footer li {
     color: white;
     text-decoration: none; /* Suppression du soulignement de texte */
     font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
     font-size: 20px;
     padding: 0 2vw;
+    margin-top: 1.2rem;
 }
 
-footer li {
-    margin-top: 1.2rem;    
+footer a {
+    text-decoration: none;
+    color: white;
 }
 
 .dividing_bar {
@@ -618,7 +620,7 @@ footer li {
 }
 
 @media (max-width: 1024px) {
-    footer a {       
+    footer li {       
         font-size: 17px;
     }
 }
