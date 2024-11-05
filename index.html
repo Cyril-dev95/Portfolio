@@ -41,15 +41,18 @@
         </nav>
     </header>
         
+    <canvas id="matrix"></canvas>
     <!--------------------- 1ÈRE SECTION - PAGE D'ACCUEIL ---------------------->
     <section id="Accueil">
         <h1>PARCHET Cyril</h1>
         <h2>Développeur Web</h2>
         <button id="button_vp"><a href="#Infos">Voir plus</a></button>
     </section>
-
+    
     <!--------------------- 2ÈME SECTION - À PROPOS DE MOI ---------------------->
+    
     <section id="Infos">
+        
         <h3>À propos de moi</h3>
         <div id="pre_container">
         <pre id="code_style_container">
@@ -111,6 +114,12 @@
                     <progress max="100" value="70"></progress>
             </div>
     </section>
+    <div class="img-container-cv">
+       <img src="img/PC-ETEINS-ETAPE-1-OK.png" alt="" id="image-pc"> 
+       <!-- <img src="img/PC-ALLUMER-ETAPE-2.png" alt="" class="cv-skills-pc2">  -->
+    </div>
+    <a href="CV_PARCHET_Cyril.pdf" download="CV_PARCHET_Cyril" class="download-btn">Télécharger mon CV</a>
+    
 
     <!--------------------- LIGNE DE SÉPARATION ENTRE MES SECTIONS ---------------------->
     <hr class="dividing_bar">
@@ -119,9 +128,24 @@
     <section id="projects">
         <h3>Mes Projets</h3>
         <div class="image_container">
-            <img src="img/CP-2.webp" alt=""> <!------ alt à modifier quand ce sera la bonne image ------>
-            <img src="img/CP-2.webp" alt=""> <!------ alt à modifier quand ce sera la bonne image ------>
-            <img src="img/CP-2.webp" alt=""> <!------ alt à modifier quand ce sera la bonne image ------>
+            <figure>
+                <img src="img/screen-portfolio.webp" alt="capture d'écran de mon portfolio" class="grow">
+                <figcaption>Mon Portfolio</figcaption>
+            </figure>
+            
+            <figure>
+                <a href="https://cyril-dev95.github.io/MuseeFelins/" target="_blank">
+                    <img src="img/le-musee-des-felins.webp" alt="capture d'écran d'un projet perso le musée des félins" class="grow">
+                </a>
+                <figcaption>Le Musée des Félins</figcaption>
+            </figure>
+            
+            <figure>
+                <a href="https://cyril-dev95.github.io/PlayVsXbox/" target="_blank">
+                    <img src="img/Consoles-de-jeux.webp" alt="capture d'écran d'un projet perso console de jeux" class="grow">
+                </a>
+                <figcaption>Play vs Xbox</figcaption>
+            </figure>
         </div>
     </section>
 

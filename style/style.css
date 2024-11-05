@@ -17,9 +17,13 @@ html {
 body {
     overflow-x: hidden;
     background-color: black;
-    background-image: url(../img/BG-Portfolio-webp.webp); /* Ajout d'une image en fond */
-    background-size: contain; /* Redimensionne l'image de fond pour qu'elle soit entièrement visible */
-    background-repeat: no-repeat; /* Empêche l'image de fond de se répéter. */
+}
+
+#matrix {
+    position: fixed; /* Le canvas est fixé à l'écran */
+    top: 0;
+    z-index: -2; /* Envoyer le canvas à l'arrière-plan */
+    pointer-events: none; /* Empêcher le canvas d'interférer avec les clics */
 }
 
 #logo_cp {
@@ -61,11 +65,11 @@ body {
 .mobile-menu {
     position: fixed;
     top: 0;
-    right: 0; /* Changement ici */
+    right: 0;
     height: 80px;
     color: white;
     z-index: 9999;
-    padding-right: 2rem; /* Changement ici */
+    padding-right: 2rem;
     display: flex;
     align-items: center;
     display: none;
@@ -118,7 +122,7 @@ h2 {
 }
 
 #Infos {
-    margin-top: 35vw;
+    margin-top: 20vw;
     color: white;
 }
 
@@ -208,7 +212,7 @@ pre {
 #skills_container2 {
     width: 20.6vw; /* Modification de la largeur de ma barre de progression */
     margin: auto; /* Alignement de mon texte au centre de ma page */
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
 }
 
 progress::-webkit-progress-bar {
@@ -240,6 +244,17 @@ progress {
     margin: auto; /* Permet de centrer la section "Projects" */
 }
 
+figure {
+    text-align: center; /* Centre le texte de la légende */
+}
+
+figcaption {
+    margin-top: 1rem; /* Espace au-dessus de la légende */
+    font-size: 20px; /* Ajuste la taille de la police selon tes préférences */
+    color: #ffffff; /* Couleur pour le texte de la légende */
+    font-family: "anta"; /* Appel d'une de mes police d'écriture venant d'être intégrer */
+}
+
 .image_container {
     margin-top: 5rem;
     display: grid; /* Utilise Grid pour organiser les images */
@@ -251,7 +266,7 @@ progress {
 .image_container img {
     height: 17rem; /* Modifie la taille de l'image */
     width: 90%; /* Permet de modifier la largeur de mon conteneur */
-    object-fit: contain; /* Remplit l'espace sans déformer l'image */
+    object-fit: fill; /* Remplit l'espace sans déformer l'image */
     border: 4px solid #00C8FF; /* Ajout de bordure à l'image */
 }
 
@@ -494,6 +509,50 @@ footer a {
     border-radius: 5px;
     padding: 0.5rem 2rem;
 }
+
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+  
+.grow:hover { 
+    transform: scale(1.5); 
+}
+
+#image-pc {
+    position: relative;
+    top: -30vh;
+    left: 05vw;
+    cursor: pointer;
+}
+
+#centered-image {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+
+.download-btn {
+    display: inline-block;
+    font-family: "anta";
+    padding: 0.75rem 1.5rem;
+    background-color: #00C8FF;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+    position: relative;
+    top: -26vh;
+    left: 4.8vw;
+}
+
+.download-btn:hover {
+    color: black;
+}
+
 
 @media (max-width: 1644px) {
     #code_style_container {
